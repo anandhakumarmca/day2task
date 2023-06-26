@@ -1,1 +1,103 @@
 Differences between Document and Window Objects in javascript
+=============================================================
+
+Introduction:
+-------------
+  The Document and Window objects are fundamental components of the JavaScript Document Object Model (DOM) and play distinct roles in web development. 
+
+Purpose and Scope:
+------------------
+  The Window object represents the global context for JavaScript code running in a browser window or tab. It serves as the top-level object, encapsulating the entire browsing context, including frames or iframes. It provides properties and methods that are accessible throughout the window, such as the location, history, and setTimeout.
+
+  On the other hand, the Document object represents the web page or HTML document loaded in the window. It is a property of the Window object and provides access to the document's structure, content, and elements. The Document object is responsible for manipulating and interacting with the HTML elements within the web page.
+
+Global Scope:
+-------------
+  The Document object is not part of the global scope. It can be accessed within the scope of a specific HTML document using the document property of the Window object.
+For example:
+
+JS Code:
+const documentObject = window.document;
+
+  The Window object, on the other hand, is part of the global scope, and its properties and methods can be accessed directly. 
+For example:
+
+JS Code:
+const windowHeight = window.innerHeight;
+
+Methods and Properties:
+-----------------------
+  The Document object provides methods and properties related to the content and structure of the HTML document. Examples include methods like getElementById(), querySelector(), createElement(), and properties like title, body, head, etc. These methods and properties allow manipulation and interaction with the document's elements and structure.
+
+  The Window object provides methods and properties related to the browser window or tab. Examples include methods like open(), close(), alert(), setTimeout(), and properties like location, navigator, localStorage, etc. These methods and properties are used for controlling the window behavior, interacting with the browser, and managing browser-related functionalities.
+
+Relationship:
+------------
+  The Document object is a child object of the Window object. It can be accessed via the document property of the Window object. 
+For example:
+
+JS Code:
+const documentObject = window.document;
+
+  This relationship allows access to the Document object's methods and properties from the Window object.
+
+Accessibility:
+-------------
+  The Document object is accessible within the context of the HTML document it represents. It provides methods and properties to manipulate the document's elements and structure.
+
+  The Window object is accessible globally in the browser environment. It can be accessed from any JavaScript code running within the browser window and provides access to browser-related functionalities.
+
+Conclusion:
+-----------
+  The Document object focuses on the specific HTML document and provides methods to manipulate its content, while the Window object represents the browser window or tab and offers control over various browser functionalities. 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Extra References:
+
+what is global objects in JavaScript
+
+Global objects in JavaScript refer to objects that are available throughout the entire JavaScript runtime environment. They are accessible from any part of your code without the need for explicit importing or requiring. Here are some examples of global objects in JavaScript:
+  Math: The Math object provides mathematical constants and functions for performing mathematical operations, such as trigonometry, logarithms, random number generation, etc.
+  JSON: The JSON object provides methods to parse JSON strings into JavaScript objects and stringify JavaScript objects into JSON strings.
+  console: The console object provides methods for logging information, debugging code, and displaying messages in the browser's console, such as console.log(), console.error(), console.warn(), etc.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Lists of Window Objects:
+
+window.alert(): Displays an alert dialog box with a message and an OK button.
+window.confirm(): Displays a dialog box with a message and OK/Cancel buttons, allowing the user to confirm or cancel an action.
+window.prompt(): Displays a dialog box with a message, an input field, and OK/Cancel buttons, prompting the user to enter a value.
+window.location: Represents the current URL of the window and provides methods and properties to manipulate and navigate to different URLs.
+window.history: Represents the browsing history of the window and provides methods and properties to navigate through the history stack.
+window.navigator: Provides information about the user's browser and operating system.
+window.open(): Opens a new browser window or tab with a specified URL.
+window.close(): Closes the current browser window or tab.
+window.setTimeout() and window.setInterval(): Functions for scheduling the execution of code after a specified delay (setTimeout) or at regular intervals (setInterval).
+window.innerHeight and window.innerWidth: Provide the dimensions (height and width) of the window's viewport.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Lists of Document Objects:
+
+document.getElementById(): Retrieves an element from the document using its unique ID.
+document.getElementsByClassName(): Retrieves a collection of elements with a specific class name.
+document.getElementsByTagName(): Retrieves a collection of elements with a specific HTML tag name.
+document.querySelector(): Retrieves the first element that matches a specified CSS selector.
+document.querySelectorAll(): Retrieves all elements that match a specified CSS selector.
+document.createElement(): Creates a new HTML element.
+document.createTextNode(): Creates a new text node.
+document.body: Represents the <body> element of the document.
+document.head: Represents the <head> element of the document.
+document.title: Represents the title of the document.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Lists of Global Objects:
+
+console: The console object provides methods to log information, debug code, and display messages in the browser's console.
+setTimeout, clearTimeout, setInterval, clearInterval: These functions are used for scheduling and canceling the execution of code after a specified delay.
+Math: The Math object provides mathematical constants and functions for performing mathematical operations.
+JSON: The JSON object provides methods to parse JSON strings into JavaScript objects and stringify JavaScript objects into JSON strings.
+Date: The Date object provides methods for working with dates and times.
+localStorage, sessionStorage: These objects provide methods for storing and retrieving data locally in the browser.
+These are just a few examples of commonly used objects in JavaScript. The language provides a wide range of objects and APIs for different purposes, and libraries and frameworks often introduce additional objects specific to their functionality.
+====================================================================================================================================================================================================================
